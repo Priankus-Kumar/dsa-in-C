@@ -18,9 +18,8 @@ void display()
     {
         printf("Stack elements:\n");
 
-        for (int i = top; i >= 0; i--)
-        {
-            printf("%d\n", stack[i]);
+       for (int i = 0; i <= top; i++) {
+    printf("%d\n", stack[i]);
         }
     }
 }
@@ -28,7 +27,6 @@ void display()
 int main()
 {
     // call the method from the operation_Stack.c
-    
     // push(10);
     // push(20);
     // push(30);
