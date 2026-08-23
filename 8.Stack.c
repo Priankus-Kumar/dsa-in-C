@@ -19,7 +19,7 @@ void display()
         printf("Stack elements:\n");
 
        for (int i = 0; i <= top; i++) {
-    printf("%d\n", stack[i]);
+          printf("%d\n", stack[i]);
         }
     }
 }

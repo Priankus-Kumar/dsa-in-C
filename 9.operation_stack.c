@@ -1,15 +1,3 @@
-// Check whether the stack is empty
-int isEmpty(void)
-{
-    return top == -1;
-}
-
-// Check whether the stack is full
-int isFull(void)
-{
-    return top == SIZE - 1;
-}
-
 // Push operation
 void push(int data)
 {
