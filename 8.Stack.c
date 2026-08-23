@@ -35,7 +35,17 @@ int main()
 
     // pop();
 
-    // display();
+//  if(isEmpty()){
+//      printf("true\n");
+// }else{
+//     printf("false\n");
+// }
+// if(   isFull()){
+//      printf("true\n");
+// }else{
+//     printf("false\n");
+// }
+
 
     return 0;
 }
