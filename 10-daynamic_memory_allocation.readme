@@ -4,6 +4,8 @@ Memory uninitialized hoti hai (garbage values)
 1 argument leta hai
 malloc(sizeof(int))
 
+syntax:->>
+ptr = (datatype *)malloc(size_in_bytes);
 
 calloc()
 2 arguments leta hai
@@ -16,9 +18,18 @@ p[2] → 0
 p[3] → 0
 p[4] → 0
 
+syntax->>
+ptr = (datatype *)calloc(number, size);
+
 
 
 malloc() → memory allocate
 calloc() → memory allocate + 0 initialize
 realloc() → existing memory ka size change
+
+syntax-->>
+p = (int *)malloc(5 * sizeof(int));
+p = (int *)realloc(p, 10 * sizeof(int));
+
 free() → memory release
+free(p);
