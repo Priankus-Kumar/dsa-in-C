@@ -43,11 +43,7 @@ void manual_linkedlist() {
 	traverse(head);
 }
 
-
-
 int main() {
-
 	manual_linkedlist();
-// 	user_linkedList();
 	return 0;
 }
