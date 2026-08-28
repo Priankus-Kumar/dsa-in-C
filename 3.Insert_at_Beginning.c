@@ -39,7 +39,7 @@ void manual_linkedlist() {
 	third->data=3;
 	third->next=NULL;
 
-    insertBegin(*head,5);
+    insertBegin(&head,5);
 	traverse(head);
 }
 
