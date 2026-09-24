@@ -27,7 +27,6 @@ struct Node *deleteNode(struct Node *root, int value) {
 
     // Node found
     else {
-
         // Case 1: No child
         if (root->left == NULL && root->right == NULL) {
             free(root);
