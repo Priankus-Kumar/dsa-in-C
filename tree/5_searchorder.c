@@ -23,15 +23,12 @@ int searchNode(struct Node *root, int data) {
     if (root == NULL) {
         return 0;
     }
-
     if (root->data == data) {
         return 1;
     }
-
     if (data < root->data) {
         return searchNode(root->left, data);
     }
-
     return searchNode(root->right, data);
 }
 
