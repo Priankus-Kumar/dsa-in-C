@@ -10,51 +10,51 @@ struct Node *findMin(struct Node *root) {
 
 struct Node *deleteNode(struct Node *root, int value) {
 
-    // Value not found
+    // Agar value nahi mila toh root return karo
     if (root == NULL) {
         return root;
     }
 
-    // Search in left subtree
+    // Agar value chhoti hai toh left subtree mein dhundho
     if (value < root->data) {
         root->left = deleteNode(root->left, value);
     }
 
-    // Search in right subtree
+    // Agar value badi hai toh right subtree mein dhundho
     else if (value > root->data) {
         root->right = deleteNode(root->right, value);
     }
 
-    // Node found
+    // Node mil gaya - ab delete karo
     else {
-        // Case 1: No child
+        // Case 1: Koi child nahi hai (leaf node)
         if (root->left == NULL && root->right == NULL) {
             free(root);
             return NULL;
         }
 
-        // Case 2: Only right child
+        // Case 2: Sirf right child hai
         else if (root->left == NULL) {
             struct Node *temp = root->right;
             free(root);
             return temp;
         }
 
-        // Case 2: Only left child
+        // Case 2: Sirf left child hai
         else if (root->right == NULL) {
             struct Node *temp = root->left;
             free(root);
             return temp;
         }
 
-        // Case 3: Two children
+        // Case 3: Dono children hain
         else {
             struct Node *temp = findMin(root->right);
 
-            // Copy successor's value
+            // Successor ka value copy karo
             root->data = temp->data;
 
-            // Delete successor
+            // Successor ko delete karo
             root->right = deleteNode(root->right, temp->data);
         }
     }
